@@ -1,0 +1,201 @@
+/* background of home page */
+
+.home-body{
+    background-color: #D4C29E;
+}
+
+/* image on home screen */
+
+.homeimage{
+    width: 250px;
+    height: 330px;
+    rotate: -4deg;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* navigation bar */
+
+.threes{
+    margin-right: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar{
+    margin-bottom: 1.5rem;
+}
+
+.navbar-brand{
+    margin: 1rem auto auto 1.2rem;
+    font-size: 1.5rem;
+}
+
+/* headings of front page */
+
+.upper{
+    text-align: center;
+    color: #473A1F;
+    font-family: 'Rosarivo', serif;
+    font-weight:700;
+}
+
+.lower{
+    text-align: center;
+    color: #201B12;
+    font-family: 'Noto Sans Linear B', sans-serif;
+}
+
+/* body of uv page */
+
+.uv-body{
+    background-color: #EBDEC5;
+}
+
+/* when no uv styling */
+
+.no-uv-img{
+    width: 270px;
+    height: 300px;
+    border-radius: 10%;
+}
+
+.waiting{
+    text-align: center;
+    margin-top: 2.5rem;
+    font-family: 'Neucha', cursive;
+    color:#473A1F;
+}
+
+/* normal uv page styling */
+
+.header-container{          /* here ozone one is also getting affected because same class */
+    text-align: center;
+}
+
+.find-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin-top: 2.3rem;
+    color: #624D22;
+}
+
+.btn {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: Georgia;
+    color: #6b6948;
+    font-size: 12px;
+    background: #D2B67F;
+    padding: 7px 23px 7px 23px;
+    text-decoration: none;
+    margin-left: 1rem;
+  }
+  
+.btn:hover {
+    background: #4a3e1a;
+    text-decoration: none;
+  }
+
+.uv-images{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 10%;
+    margin-bottom: 0.8rem;
+}
+
+.result-heading{
+    text-align: center;
+    padding: 0.7rem;
+    color: #251F12;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.sep{
+    margin-top: 1.7rem;
+    margin-bottom: 0;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+.flex-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-content: flex-start;
+    margin: auto 4rem auto 4rem;
+}
+
+.psnote{
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Handlee', cursive;
+}
+
+.flex-item > h4 {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.7rem;
+    color: #6A5625;
+}
+
+/* ozone page */
+
+.ozone-body{
+    background-color: #CDBF8E;
+}
+
+.btn-two {
+    background: #A9954B;
+    background-image: -webkit-linear-gradient(top, #A9954B, #ad791a);
+    background-image: -moz-linear-gradient(top, #A9954B, #ad791a);
+    background-image: -ms-linear-gradient(top, #A9954B, #ad791a);
+    background-image: -o-linear-gradient(top, #A9954B, #ad791a);
+    background-image: linear-gradient(to bottom, #A9954B, #ad791a);
+    -webkit-border-radius: 12;
+    -moz-border-radius: 12;
+    border-radius: 10px;
+    font-family: Georgia;
+    color: #63572C;
+    font-size: 12px;
+    padding: 7px 23px 7px 23px;
+    text-decoration: none;
+    margin-left: 1rem;
+    border: none;
+  }
+  
+.btn-two:hover {
+    background: #947f4b;
+    text-decoration: none;
+}
+
+/* contact page */
+
+.contact-body{
+    background-color: #E4D6BE;
+}
+
+.contact-heading{
+    font-family: 'Noto Sans Linear B', sans-serif;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.contact-content{
+    margin-left: 3rem;
+}
+
+.mail{
+    margin-bottom: 0.3rem;
+}
+
+.logo{
+    font-size: 3rem;
+    margin-top: 1.4rem;
+    margin-right: 0.6rem;
+}

@@ -1,0 +1,63 @@
+<head>
+    <title>UVGuardian</title>
+</head>
+
+<%- include('navbar.ejs') %>
+<body class="ozone-body">
+    <div class="header-container">
+    <h1 class="find-heading">Find the ozone layer content at your location</h1>
+    <form method="post" action="/ozoneknow">
+    <%- include('dropdown.ejs') %>
+    <button class="btn-two" type="submit">Submit</button>
+    </form>
+    </div>
+
+    <% if (locals.location) { %>
+        <h1 class="result-heading sep">Ozone content at <%- location %> (in Dobson units) is: </h1>
+    <% } %>
+    
+
+    <% if (locals.ozonecont) { %>
+     
+        <h1 class="result-heading"><%- ozonecont %></h1>
+        <% if (ozonecont<300) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>The ozone concentration in your location is less than 300 and it is a cause of concern. These low ozone levels can result in increased UV radiation reaching the Earth's surface. Please take care of yourself by taking suitable measures such as applying sunscreen and wearing suitable clothing.</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\c8467db88660f9fb76e2e4553e1438b9.jpg" alt="dog in home">
+                    <p>ig you have to stay at home like this dog</p>
+                </div>
+            </div>
+        <% } 
+        else if (300<=ozonecont<=350) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>Ozone concentration of about 300 to 350 DU is considered as a healthy ozone layer, so dont worry the ozone layer above your head in stratosphere is doing a good job protecting you from harmful uv rays!</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\f225703cc15c0a7d26f1d2263c214af2.jpg">
+                    <p>Go ahead and click a sunkissed photo of you like this dog</p> 
+                </div>
+            </div>
+        <% }
+        else if (ozonecont>350) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>The ozone layer is relatively thick and healthy in your area!</h4>
+                    <h4>It basically means that you will be having enhanced protection from uv rays and less chances of the ozone layer of getting depleted to concerning levels.</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\f225703cc15c0a7d26f1d2263c214af2.jpg">
+                    <p>Enjoy in the sun, it won't harm you (the dog knows already)</p> 
+                </div>
+            </div>   
+        <% } %>
+
+    <% }
+    else { %>
+        <h4 class="waiting">waiting for you to submit</h4>
+    <% } %>
+    
+</body>

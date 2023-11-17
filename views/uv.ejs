@@ -1,0 +1,78 @@
+<head>
+    <title>UVGuardian</title>
+</head>
+
+<%- include('navbar.ejs') %>
+<body class="uv-body">
+    <div class="header-container">
+    <h1 class="find-heading">Find the current UV index of your state</h1>
+    <form action="/uvfs" method="post">
+    <%- include('dropdown.ejs') %>
+    <button class="btn" type="submit">Submit</button>
+    </form>
+    </div>
+
+    <% if (locals.location) { %>
+        <h1 class="result-heading sep">UV Index at <%- location %> is: </h1>
+    <% } %>
+    
+
+    <% if (locals.uvindex) { %>
+     
+        <h1 class="result-heading"><%- uvindex %></h1>
+
+        <% if (1>uvindex>0) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>You are at no risk<br>and can remove your sunscreen</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\60c3f33fcd50e2695db40db6f1fca974.jpg" alt="night lamp">
+                    <p class="psnote">ig its night time so how about glowing<br> up this momos-looking nightlamp</p>
+                </div>
+            </div>
+        <% } 
+        else if (1<=uvindex && uvindex<3) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>You are at a very low risk right now and can go outside without any sun protection althought it would be a good idea if you do wear sunscreen</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\0319f2948abd5084643f9afda1ce44af.jpg">
+                    <p class="psnote">Isnt the sun cute?</p>
+                </div>
+            </div>
+        <% }
+        else if (3<=uvindex && uvindex<=6) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>You are at moderate risk of getting your skin damaged by the sun</h4>
+                    <h4>Apply sunscreen with atleast spf 15, and try to wear sunglasses and hat</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\0319f2948abd5084643f9afda1ce44af.jpg">
+                    <p class="psnote">This cute little thing can be scary fr</p>
+                </div>
+            </div>
+        <% }
+        else if (6<uvindex) { %>
+            <div class="flex-main">
+                <div class="flex-item">
+                    <h4>You are at a very high risk</h4>
+                    <h4>Take extra precautions. Use a broad-spectrum sunscreen. Wear protective clothing and accessories. Avoid outdoor activities during peak sun hours, or if necessary, take frequent breaks in the shade.</h4>
+                </div>
+                <div class="flex-item">
+                    <img class="uv-images" src="\images\0319f2948abd5084643f9afda1ce44af.jpg">
+                    <p class="psnote">The sun says, "GAAARGGHH I AM DANGEROUS"</p>
+                </div>
+            </div>
+        <% } %>
+
+    <% }
+    else { %> 
+        <h4 class="waiting">waiting for you to submit</h4>
+    <% } %>
+    
+    
+    
+</body>
